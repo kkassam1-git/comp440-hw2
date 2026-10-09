@@ -19,7 +19,8 @@ makes the process straightforward, from the IDE to the notebook.
 
 ### Step D: How the MCP server connects Claude Code to Colab
 
-XXXX
+Claude Code communicates with the local MCP server, which acts as the gateway. The server connects
+Claude to the GPU, the tool needed for the tasks we're running, and returns data back to Claude.
 
 ## Part 1: The tools and the tests
 
