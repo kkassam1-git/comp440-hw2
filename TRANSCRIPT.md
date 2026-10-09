@@ -36,7 +36,7 @@ Now type `/exit`.
 <!-- transcript-session: 73fea597-67ea-4f3d-bb32-e76e02c1711e | 2026-10-06T19:44:40.706Z -->
 ## Session `73fea597` — 2026-10-06 19:44:40
 
-*8 user turns. Tool outputs and reasoning omitted.*
+*11 user turns. Tool outputs and reasoning omitted.*
 
 **User:**
 lets do the setup
@@ -147,5 +147,47 @@ Kaif Kassam
 
 **Claude:**
 - 🔧 `Edit` — /Users/kaifkassam/Desktop/Semester 7/Collective Intelligence/Github/comp440-hw2/WRITEUP.md
+- 🔧 `Bash` — Dump transcript and commit the writeup
+- 🔧 `Bash` — Start the evaluation viewer in the background
+- 🔧 `Bash` — Check the viewer's startup output
+I filled in the top of `WRITEUP.md`:
+
+> **Name:** Kaif Kassam
+> **Date:** October 8, 2026
+
+I ran `python3 dump_transcript.py`, which reported that this session is in `TRANSCRIPT.md`. Then I committed the change as `Name and date` (commit 59773a4).
+
+I also started the evaluation viewer in the background with `python3 evals/app/serve.py --open`. It's still running, but it hasn't printed anything yet. You'll use the viewer to look at graded runs.
+
+Did a viewer page open in your browser? It should be at http://localhost:8440.
+
+**User:**
+yes
+
+**Claude:**
+Good, the viewer is running at http://localhost:8440.
+
+Next is **Step D**, the last slot in Part 0. You've now seen Claude open a notebook in your browser and check its GPU. Based on that, how do you think the MCP server connects Claude Code on your laptop to the notebook running on Google's computer?
+
+Give me your best guess in your own words, and I'll write it under "Step D: How the MCP server connects Claude Code to Colab."
+
+**User:**
+Claude code communicates with the local MCP server, the gateway,  and the server connects claude to the GPU (the tool) needed for the tasks we're running, returning data back to claude.
+
+**Claude:**
+- 🔧 `Edit` — /Users/kaifkassam/Desktop/Semester 7/Collective Intelligence/Github/comp440-hw2/WRITEUP.md
+I put your answer under Step D, split into two sentences. The slot now reads:
+
+> **Step D: How the MCP server connects Claude Code to Colab**
+>
+> Claude Code communicates with the local MCP server, which acts as the gateway. The server connects Claude to the GPU, the tool needed for the tasks we're running, and returns data back to Claude.
+
+Does that still say what you meant? You can also add to it now, for example how the local server reaches Google's computer.
+
+**User:**
+yes that's what i meant
+
+**Claude:**
+- 🔧 `Skill` — checkpoint
 
 <!-- end-session: 73fea597-67ea-4f3d-bb32-e76e02c1711e -->
